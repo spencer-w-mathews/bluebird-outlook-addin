@@ -13,10 +13,10 @@
   <DisplayName DefaultValue="Bluebird for Outlook" />
   <Description DefaultValue="Rewrite emails, adjust tone, and rate AI drafts with Bluebird." />
 
-  <IconUrl DefaultValue="https://app.bluebird.ai/outlook/assets/icon-64.png" />
-  <HighResolutionIconUrl DefaultValue="https://app.bluebird.ai/outlook/assets/icon-128.png" />
+  <IconUrl DefaultValue="https://spencer-w-mathews.github.io/bluebird-outlook-addin/assets/icon-64.png" />
+  <HighResolutionIconUrl DefaultValue="https://spencer-w-mathews.github.io/bluebird-outlook-addin/assets/icon-128.png" />
 
-  <SupportUrl DefaultValue="https://bluebird.ai/support" />
+  <SupportUrl DefaultValue="https://spencer-w-mathews.github.io/bluebird-outlook-addin/" />
 
   <Hosts>
     <Host Name="Mailbox" />
@@ -31,7 +31,7 @@
   <FormSettings>
     <Form xsi:type="ItemRead">
       <DesktopSettings>
-        <SourceLocation DefaultValue="https://app.bluebird.ai/outlook/index.html" />
+        <SourceLocation DefaultValue="https://spencer-w-mathews.github.io/bluebird-outlook-addin/index.html" />
       </DesktopSettings>
     </Form>
   </FormSettings>
@@ -85,8 +85,8 @@
 
           <mailappor:Resources>
             <mailappor:bt:Images>
-              <mailappor:bt:Image id="residIcon16" DefaultValue="https://app.bluebird.ai/outlook/assets/icon-16.png" />
-              <mailappor:bt:Image id="residIcon32" DefaultValue="https://app.bluebird.ai/outlook/assets/icon-32.png" />
+              <mailappor:bt:Image id="residIcon16" DefaultValue="https://spencer-w-mathews.github.io/bluebird-outlook-addin/assets/icon-16.png" />
+              <mailappor:bt:Image id="residIcon32" DefaultValue="https://spencer-w-mathews.github.io/bluebird-outlook-addin/assets/icon-32.png" />
             </mailappor:bt:Images>
             <mailappor:bt:Urls>
               <mailappor:bt:Url id="residTaskPaneUrl" DefaultValue="https://app.bluebird.ai/outlook/index.html" />
