@@ -13,6 +13,7 @@
   <DisplayName DefaultValue="Bluebird for Outlook" />
   <Description DefaultValue="Rewrite emails, adjust tone, and rate AI drafts with Bluebird." />
 
+  <!-- Outlook Add-in logo at 64px & 128px (optional but recommended) -->
   <IconUrl DefaultValue="https://spencer-w-mathews.github.io/bluebird-outlook-addin/assets/icon-64.png" />
   <HighResolutionIconUrl DefaultValue="https://spencer-w-mathews.github.io/bluebird-outlook-addin/assets/icon-128.png" />
 
@@ -31,6 +32,7 @@
   <FormSettings>
     <Form xsi:type="ItemRead">
       <DesktopSettings>
+        <!-- FOR DEV: GitHub Pages Deployment -->
         <SourceLocation DefaultValue="https://spencer-w-mathews.github.io/bluebird-outlook-addin/index.html" />
       </DesktopSettings>
     </Form>
@@ -46,7 +48,6 @@
 
   <VersionOverrides
     xsi:type="mailappor:VersionOverrides"
-    xmlns:mailappor="http://schemas.microsoft.com/office/mailappversionoverrides/1.0"
     Version="1.0">
 
     <mailappor:Requirements>
@@ -62,43 +63,50 @@
           <mailappor:ExtensionPoint xsi:type="mailappor:MessageComposeCommandSurface">
             <mailappor:OfficeTab id="TabDefault">
               <mailappor:Group id="grpBluebird" label="Bluebird">
-                <mailappor:Control
-                  xsi:type="mailappor:Button"
-                  id="btnOpenBluebird">
+                <mailappor:Control xsi:type="mailappor:Button" id="btnOpenBluebird">
                   <mailappor:Label resid="residButtonLabel" />
                   <mailappor:Supertip>
                     <mailappor:Title resid="residButtonLabel" />
                     <mailappor:Description resid="residButtonDesc" />
                   </mailappor:Supertip>
+
+                  <!-- RIBBON ICONS -->
                   <mailappor:Icon>
                     <mailappor:bt:Image size="16" resid="residIcon16" />
                     <mailappor:bt:Image size="32" resid="residIcon32" />
                   </mailappor:Icon>
+
                   <mailappor:Action xsi:type="mailappor:ShowTaskPane">
                     <mailappor:SourceLocation resid="residTaskPaneUrl" />
                     <mailappor:SupportsPinning>true</mailappor:SupportsPinning>
                   </mailappor:Action>
+
                 </mailappor:Control>
               </mailappor:Group>
             </mailappor:OfficeTab>
           </mailappor:ExtensionPoint>
 
           <mailappor:Resources>
+
+            <!-- ICON FILE PATHS -->
             <mailappor:bt:Images>
               <mailappor:bt:Image id="residIcon16" DefaultValue="https://spencer-w-mathews.github.io/bluebird-outlook-addin/assets/icon-16.png" />
               <mailappor:bt:Image id="residIcon32" DefaultValue="https://spencer-w-mathews.github.io/bluebird-outlook-addin/assets/icon-32.png" />
             </mailappor:bt:Images>
+
             <mailappor:bt:Urls>
-              <mailappor:bt:Url id="residTaskPaneUrl" DefaultValue="https://app.bluebird.ai/outlook/index.html" />
+              <mailappor:bt:Url id="residTaskPaneUrl" 
+                DefaultValue="https://spencer-w-mathews.github.io/bluebird-outlook-addin/index.html" />
             </mailappor:bt:Urls>
+
             <mailappor:bt:ShortStrings>
               <mailappor:bt:String id="residButtonLabel" DefaultValue="Bluebird" />
             </mailappor:bt:ShortStrings>
+
             <mailappor:bt:LongStrings>
-              <mailappor:bt:String
-                id="residButtonDesc"
-                DefaultValue="Open Bluebird to rewrite and retone your email draft." />
+              <mailappor:bt:String id="residButtonDesc" DefaultValue="Open Bluebird to rewrite and retone your email draft." />
             </mailappor:bt:LongStrings>
+
           </mailappor:Resources>
 
         </mailappor:DesktopFormFactor>
