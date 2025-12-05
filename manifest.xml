@@ -14,8 +14,8 @@
   <Description DefaultValue="Rewrite emails, adjust tone, and rate AI drafts with Bluebird." />
 
   <!-- Outlook Add-in logo at 64px & 128px (optional but recommended) -->
-  <IconUrl DefaultValue="https://spencer-w-mathews.github.io/bluebird-outlook-addin/assets/icon-64.png" />
-  <HighResolutionIconUrl DefaultValue="https://spencer-w-mathews.github.io/bluebird-outlook-addin/assets/icon-128.png" />
+  <IconUrl DefaultValue="https://spencer-w-mathews.github.io/bluebird-outlook-addin/icon-64.png" />
+  <HighResolutionIconUrl DefaultValue="https://spencer-w-mathews.github.io/bluebird-outlook-addin/icon-128.png" />
 
   <SupportUrl DefaultValue="https://spencer-w-mathews.github.io/bluebird-outlook-addin/" />
 
@@ -90,8 +90,8 @@
 
             <!-- ICON FILE PATHS -->
             <mailappor:bt:Images>
-              <mailappor:bt:Image id="residIcon16" DefaultValue="https://spencer-w-mathews.github.io/bluebird-outlook-addin/assets/icon-16.png" />
-              <mailappor:bt:Image id="residIcon32" DefaultValue="https://spencer-w-mathews.github.io/bluebird-outlook-addin/assets/icon-32.png" />
+              <mailappor:bt:Image id="residIcon16" DefaultValue="https://spencer-w-mathews.github.io/bluebird-outlook-addin/icon-16.png" />
+              <mailappor:bt:Image id="residIcon32" DefaultValue="https://spencer-w-mathews.github.io/bluebird-outlook-addin/icon-32.png" />
             </mailappor:bt:Images>
 
             <mailappor:bt:Urls>
