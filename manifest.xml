@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<OfficeApp
+  xmlns="http://schemas.microsoft.com/office/appforoffice/1.1"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns:bt="http://schemas.microsoft.com/office/officeappbasictypes/1.0"
+  xmlns:mailappor="http://schemas.microsoft.com/office/mailappversionoverrides/1.0"
+  xsi:type="MailApp">
+
+  <Id>00000000-0000-0000-0000-000000blueb01</Id>
+  <Version>1.0.0.0</Version>
+  <ProviderName>Bluebird</ProviderName>
+  <DefaultLocale>en-US</DefaultLocale>
+  <DisplayName DefaultValue="Bluebird for Outlook" />
+  <Description DefaultValue="Rewrite emails, adjust tone, and rate AI drafts with Bluebird." />
+
+  <IconUrl DefaultValue="https://app.bluebird.ai/outlook/assets/icon-64.png" />
+  <HighResolutionIconUrl DefaultValue="https://app.bluebird.ai/outlook/assets/icon-128.png" />
+
+  <SupportUrl DefaultValue="https://bluebird.ai/support" />
+
+  <Hosts>
+    <Host Name="Mailbox" />
+  </Hosts>
+
+  <Requirements>
+    <Sets DefaultMinVersion="1.5">
+      <Set Name="Mailbox" />
+    </Sets>
+  </Requirements>
+
+  <FormSettings>
+    <Form xsi:type="ItemRead">
+      <DesktopSettings>
+        <SourceLocation DefaultValue="https://app.bluebird.ai/outlook/index.html" />
+      </DesktopSettings>
+    </Form>
+  </FormSettings>
+
+  <Permissions>ReadWriteMailbox</Permissions>
+
+  <Rule xsi:type="RuleCollection" Mode="Or">
+    <Rule xsi:type="ItemIs" ItemType="Message" FormType="Edit" />
+  </Rule>
+
+  <DisableEntityHighlighting>false</DisableEntityHighlighting>
+
+  <VersionOverrides
+    xsi:type="mailappor:VersionOverrides"
+    xmlns:mailappor="http://schemas.microsoft.com/office/mailappversionoverrides/1.0"
+    Version="1.0">
+
+    <mailappor:Requirements>
+      <mailappor:Sets DefaultMinVersion="1.5">
+        <mailappor:Set Name="Mailbox" />
+      </mailappor:Sets>
+    </mailappor:Requirements>
+
+    <mailappor:Hosts>
+      <mailappor:Host xsi:type="mailappor:Mailbox">
+        <mailappor:DesktopFormFactor>
+
+          <mailappor:ExtensionPoint xsi:type="mailappor:MessageComposeCommandSurface">
+            <mailappor:OfficeTab id="TabDefault">
+              <mailappor:Group id="grpBluebird" label="Bluebird">
+                <mailappor:Control
+                  xsi:type="mailappor:Button"
+                  id="btnOpenBluebird">
+                  <mailappor:Label resid="residButtonLabel" />
+                  <mailappor:Supertip>
+                    <mailappor:Title resid="residButtonLabel" />
+                    <mailappor:Description resid="residButtonDesc" />
+                  </mailappor:Supertip>
+                  <mailappor:Icon>
+                    <mailappor:bt:Image size="16" resid="residIcon16" />
+                    <mailappor:bt:Image size="32" resid="residIcon32" />
+                  </mailappor:Icon>
+                  <mailappor:Action xsi:type="mailappor:ShowTaskPane">
+                    <mailappor:SourceLocation resid="residTaskPaneUrl" />
+                    <mailappor:SupportsPinning>true</mailappor:SupportsPinning>
+                  </mailappor:Action>
+                </mailappor:Control>
+              </mailappor:Group>
+            </mailappor:OfficeTab>
+          </mailappor:ExtensionPoint>
+
+          <mailappor:Resources>
+            <mailappor:bt:Images>
+              <mailappor:bt:Image id="residIcon16" DefaultValue="https://app.bluebird.ai/outlook/assets/icon-16.png" />
+              <mailappor:bt:Image id="residIcon32" DefaultValue="https://app.bluebird.ai/outlook/assets/icon-32.png" />
+            </mailappor:bt:Images>
+            <mailappor:bt:Urls>
+              <mailappor:bt:Url id="residTaskPaneUrl" DefaultValue="https://app.bluebird.ai/outlook/index.html" />
+            </mailappor:bt:Urls>
+            <mailappor:bt:ShortStrings>
+              <mailappor:bt:String id="residButtonLabel" DefaultValue="Bluebird" />
+            </mailappor:bt:ShortStrings>
+            <mailappor:bt:LongStrings>
+              <mailappor:bt:String
+                id="residButtonDesc"
+                DefaultValue="Open Bluebird to rewrite and retone your email draft." />
+            </mailappor:bt:LongStrings>
+          </mailappor:Resources>
+
+        </mailappor:DesktopFormFactor>
+      </mailappor:Host>
+    </mailappor:Hosts>
+
+  </VersionOverrides>
+</OfficeApp>
